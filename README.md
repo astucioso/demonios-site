@@ -13,7 +13,7 @@ As configurações ficam em `config.js`. Os IDs configurados são `8100122284254
 
 A música configurada é “MEANT TO BE (HARDSTYLE)”, fornecida pelo proprietário. O arquivo `music.mp3` começa no trecho de 0:22 da faixa original e toca em repetição após o clique em “clique aqui para entrar”. O botão de som pausa e retoma a reprodução. Para trocar a faixa, substitua o arquivo ou ajuste `musicSrc` em `config.js`.
 
-Os perfis flutuam lentamente em ciclos independentes de 8 e 9,5 segundos. O botão de animações pausa tanto as partículas quanto essa flutuação; o movimento também respeita a preferência de movimento reduzido do dispositivo. O favicon é uma cabeça de demônio com chifres.
+Na entrada, o fundo aparece após 0,85s e os perfis entram individualmente aos 1,30s e 1,50s, crescendo de escala 0,5 até 1 com deslocamento vertical e opacidade. Cada entrada dura 0,5s e usa a curva `cubic-bezier(.215,.61,.355,1)`, ajustada pelos frames do vídeo de referência. Após a entrada, os perfis flutuam lentamente em ciclos independentes de 8 e 9,5 segundos. O botão de animações pausa tanto as partículas quanto essa flutuação; o movimento também respeita a preferência de movimento reduzido do dispositivo. O favicon é uma cabeça de demônio com chifres.
 
 O Lanyard atualiza nomes, avatares, presença e atividades por WebSocket. Se a conexão falhar, o site usa consultas periódicas, preserva os últimos dados e indica sua indisponibilidade. Cada usuário precisa permanecer no servidor https://discord.gg/lanyard.
 

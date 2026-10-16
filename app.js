@@ -9,7 +9,9 @@
   const container = document.getElementById("profiles");
   const note = document.getElementById("connection-note");
   const profiles = new Map();
+  const entrance = { delay: 1300, stagger: 200, duration: 500 };
   let entered = false;
+  let entranceTimer = null;
   let socket = null;
   let socketReady = false;
   let heartbeat = null;
@@ -35,6 +37,9 @@
     if (!/^\d{17,20}$/.test(id) || profiles.has(id)) return;
     const fallbackName = clean(item.fallbackName, 40) || "Discord";
     const article = element("article", "profile");
+    article.inert = true;
+    article.style.setProperty("--reveal-delay", `${entrance.delay + profiles.size * entrance.stagger}ms`);
+    article.style.setProperty("--reveal-duration", `${entrance.duration}ms`);
     const link = element("a", "profile-link");
     link.href = `https://discord.com/users/${id}`;
     link.target = "_blank";
@@ -279,6 +284,7 @@
     disposed = true;
     clearSocketTimers();
     clearTimeout(reconnectTimer);
+    clearTimeout(entranceTimer);
     clearInterval(pollTimer);
     if (socket) socket.close(1000, "page_hidden");
     if (event.persisted) window.addEventListener("pageshow", () => window.location.reload(), { once: true });
@@ -327,6 +333,7 @@
   document.getElementById("enter").addEventListener("click", () => {
     if (entered) return;
     entered = true;
+    document.body.classList.add("entering-profiles");
     document.body.classList.remove("awaiting-entry");
     document.getElementById("entry").classList.add("is-open");
     document.getElementById("entry").setAttribute("aria-hidden", "true");
@@ -335,6 +342,15 @@
     document.getElementById("main").focus({ preventScroll: true });
     playMusic();
     updateAnimation();
+    const finishEntrance = () => {
+      entranceTimer = null;
+      profiles.forEach(profile => { profile.article.inert = false; });
+      document.body.classList.remove("entering-profiles");
+      document.body.classList.add("profiles-revealed");
+      updateAnimation();
+    };
+    if (reduced.matches) finishEntrance();
+    else entranceTimer = setTimeout(finishEntrance, entrance.delay + Math.max(0, profiles.size - 1) * entrance.stagger + entrance.duration);
   });
 
   const canvas = document.getElementById("particles");
