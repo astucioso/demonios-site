@@ -380,8 +380,9 @@
     if (frame !== null) cancelAnimationFrame(frame);
     frame = null;
     lastFrame = 0;
+    document.body.classList.toggle("motion-paused", motionPaused || document.hidden || !entered);
     motionButton.setAttribute("aria-pressed", String(motionPaused));
-    const label = motionPaused ? "Ativar partículas" : "Pausar partículas";
+    const label = motionPaused ? "Ativar animações" : "Pausar animações";
     motionButton.setAttribute("aria-label", label);
     motionButton.title = label;
     if (motionPaused && context) context.clearRect(0, 0, width, height);
@@ -390,7 +391,7 @@
   motionButton.addEventListener("click", () => { motionPaused = !motionPaused; updateAnimation(); });
   reduced.addEventListener("change", event => { motionPaused = event.matches; updateAnimation(); });
   window.addEventListener("resize", resize, { passive: true });
-  motionButton.hidden = !context || config.particles === false;
+  motionButton.hidden = false;
   resize();
   poll(true);
   connectSocket();
