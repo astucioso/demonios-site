@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#0b0b0b"/><path d="M32 48 14 31C1 16 20 8 32 23 44 8 63 16 50 31Z" fill="#d5d2d2"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Demônio</title>
+  <rect width="64" height="64" rx="14" fill="#080808"/>
+  <g fill="#eee">
+    <path d="M21 25C9 23 7 13 10 5c2 8 8 10 15 10l-4 10Zm22 0C55 23 57 13 54 5c-2 8-8 10-15 10l4 10Z"/>
+    <path d="m13 27 6-8 13-4 13 4 6 8-3 17-16 15-16-15-3-17Z"/>
+    <path d="m16 28-10-7 5 17 8 4-3-14Zm32 0 10-7-5 17-8 4 3-14Z"/>
+  </g>
+  <path d="m19 29 11 5-9 3-2-8Zm26 0-11 5 9 3 2-8Z" fill="#c83939"/>
+  <path d="m27 44 5 3 5-3-5 8-5-8Z" fill="#080808"/>
+</svg>

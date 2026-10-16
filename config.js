@@ -4,9 +4,8 @@ window.DEMONIOS_CONFIG = {
     { id: "810012228425482240", fallbackName: "vocau" },
     { id: "1310932740048293929", fallbackName: "vivi" }
   ],
-  // Quando enviar sua música, coloque o arquivo em  e informe o caminho:
-  // musicSrc: "music.mp3"
-  musicSrc: "",
+  // A faixa foi cortada a partir de 0:22 do arquivo original.
+  musicSrc: "music.mp3",
   musicVolume: 0.35,
   particles: true
 };

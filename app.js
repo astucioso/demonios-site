@@ -290,7 +290,8 @@
   if (musicSrc) {
     // Só caminhos locais relativos: mantém a música na própria hospedagem.
     if (!/^(?:[a-z]+:|\/\/|\/|\.\.)/i.test(musicSrc)) {
-      audio = new Audio(musicSrc);
+      audio = document.getElementById("music");
+      audio.src = musicSrc;
       audio.loop = true;
       audio.preload = "none";
       audio.volume = Math.max(0, Math.min(1, Number(config.musicVolume) || .35));
