@@ -20,6 +20,6 @@ O Lanyard atualiza nomes, avatares, presença e atividades por WebSocket. Se a c
 Na pasta dos arquivos: `python -m http.server 4173`. Abra `http://localhost:4173`.
 Não precisa de Node.js, banco de dados ou chave de API para funcionar.
 
-O fundo foi extraído de uma região sem perfis do vídeo de referência fornecido. O áudio do vídeo não foi incluído. `noindex` desestimula indexação em buscadores e não restringe acesso ao site.
+Fundo escolhido pelo proprietário: “Dark goat”, https://backiee.com/wallpaper/dark-goat/312480. O escurecimento é aplicado por CSS. O áudio do vídeo não foi incluído. `noindex` desestimula indexação em buscadores e não restringe acesso ao site.
 
 Documentação do Lanyard: https://github.com/Phineas/lanyard
