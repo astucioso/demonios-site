@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090909">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="description" content="vocau & vivi">
+  <title>demonios</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preload" as="image" href="background.jpg">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="config.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body class="awaiting-entry">
+  <div class="backdrop" aria-hidden="true"></div>
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="entry" id="entry">
+    <button class="entry-button" id="enter" type="button">clique aqui para entrar</button>
+  </div>
+  <div class="controls" id="controls" hidden>
+    <button class="icon-button" id="sound" type="button" aria-label="Pausar música" aria-pressed="false" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path class="sound-waves" d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/><path class="sound-off" d="m16 9 5 6m0-6-5 6"/></svg>
+    </button>
+    <button class="icon-button" id="motion" type="button" aria-label="Pausar partículas" aria-pressed="false" title="Pausar partículas">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path class="pause-icon" d="M9 6v12M15 6v12"/><path class="play-icon" d="m9 5 9 7-9 7V5Z"/></svg>
+    </button>
+  </div>
+  <main id="main" tabindex="-1" inert>
+    <h1 class="sr-only">vocau e vivi</h1>
+    <section class="profiles" id="profiles" aria-label="Nossos perfis do Discord"></section>
+  </main>
+  <p class="connection-note" id="connection-note" role="status" aria-live="polite"></p>
+  <noscript><p class="noscript">Ative o JavaScript para entrar e ver nossos perfis.</p></noscript>
+</body>
+</html>
