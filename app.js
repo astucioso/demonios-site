@@ -50,7 +50,7 @@
     const avatar = element("img", "avatar");
     avatar.src = FALLBACK;
     avatar.alt = "";
-    avatar.width = avatar.height = 104;
+    avatar.width = avatar.height = 120;
     avatar.decoding = "async";
     avatar.referrerPolicy = "no-referrer";
     avatar.addEventListener("error", () => {
@@ -179,7 +179,7 @@
         profile.freshness.textContent = profile.data ? "Última presença recebida · tentando atualizar" : profile.error || "Presença indisponível · tentando novamente";
         if (!profile.data) profile.activity.textContent = "Não foi possível consultar a presença agora.";
       } else {
-        profile.freshness.textContent = profile.data ? (socketReady ? "Atualização em tempo real" : "Atualização periódica") : "";
+        profile.freshness.textContent = "";
       }
     });
     note.textContent = soundProblem || (failedCount === profiles.size && failedCount ? "Presença temporariamente indisponível. Tentando novamente…" : "");
