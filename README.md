@@ -22,6 +22,6 @@ O Lanyard atualiza nomes, avatares, presença e atividades por WebSocket. Se a c
 Na pasta dos arquivos: `python -m http.server 4173`. Abra `http://localhost:4173`.
 Não precisa de Node.js, banco de dados ou chave de API para funcionar.
 
-Fundo escolhido pelo proprietário: “Dark goat”, https://backiee.com/wallpaper/dark-goat/312480. O escurecimento é aplicado por CSS. O áudio do vídeo não foi incluído. `noindex` desestimula indexação em buscadores e não restringe acesso ao site.
+Fundo atual fornecido pelo proprietário: “the eyes chico / they never lie”, em `background-eyes-4k.png`. O PNG original de 3840 × 2160 pixels é preservado sem recompressão. O wallpaper é centralizado, sem filtros, desfoque, granulação ou zoom extra; o dimensionamento responsivo preserva as proporções. O áudio do vídeo não foi incluído. `noindex` desestimula indexação em buscadores e não restringe acesso ao site.
 
 Documentação do Lanyard: https://github.com/Phineas/lanyard
